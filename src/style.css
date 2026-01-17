@@ -17,3 +17,40 @@ img {
 }
 
 /* Add your styles below */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header,
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  background-color: black;
+  padding: 30px;
+}
+
+h1 {
+  color: #1db954;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav>a {
+  display: flex;
+  gap: 30px;
+  color: white;
+  text-decoration: none;
+
+}
+
+.logo {
+  max-width: 90px;
+  height: auto;
+}
