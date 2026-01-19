@@ -22,6 +22,13 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+main {
+  padding: 30px;
+  background-color: #1e1e1e;
+}
+
+/* header */
+
 header,
 nav {
   display: flex;
@@ -31,6 +38,7 @@ nav {
 
 header {
   background-color: black;
+  gap: 30px;
   padding: 30px;
 }
 
@@ -39,18 +47,120 @@ h1 {
 }
 
 nav {
-  padding: 30px;
+  gap: 30px;
 }
 
 nav>a {
   display: flex;
-  gap: 30px;
   color: white;
   text-decoration: none;
 
 }
 
+nav>a:hover {
+  color: #1db954;
+}
+
 .logo {
-  max-width: 90px;
+  width: 120px;
   height: auto;
+}
+
+/* section */
+
+section {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1e1e;
+}
+
+ul {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+h2 {
+  background-color: #1e1e1e;
+  color: #1db954;
+  font-size: 1.5rem;
+}
+
+section>ul {
+  display: flex;
+  max-width: 1200px;
+  height: auto;
+}
+
+section>ul>li {
+  color: white;
+}
+
+section>ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.playlist {
+  gap: 15px;
+}
+
+section>ul>li {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-weight: bold;
+  background-color: black;
+  border: solid 4px black;
+  border-radius: 4px;
+  align-items: center;
+}
+
+.play-list>li {
+  gap: 15px
+}
+
+.play-list>li>img {
+  width: 100px;
+  height: 100px;
+  padding: 8px;
+}
+
+/* album section */
+
+
+.album-list {
+  display: flex;
+  gap: 20px;
+}
+
+.album-list>li {
+  grid-template-columns: 1fr;
+  width: 180px;
+  padding: 15px;
+  gap: 5px;
+  border-radius: 8px;
+}
+
+.album-list>li>img {
+  border: solid 1px black;
+  border-radius: 4px;
+}
+
+.artist {
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+/* footer */
+footer {
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer>p>a {
+  color: #1db954;
+  text-decoration: none;
 }
