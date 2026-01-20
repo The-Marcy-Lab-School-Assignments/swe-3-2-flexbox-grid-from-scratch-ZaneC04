@@ -20,11 +20,11 @@ img {
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1e1e;
 }
 
 main {
   padding: 30px;
-  background-color: #1e1e1e;
 }
 
 /* header */
@@ -102,10 +102,6 @@ section>ul {
   gap: 15px;
 }
 
-.playlist {
-  gap: 15px;
-}
-
 section>ul>li {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -125,6 +121,11 @@ section>ul>li {
   height: 100px;
   padding: 8px;
 }
+
+.play-list {
+  grid-template-columns: 1fr;
+}
+
 
 /* album section */
 
@@ -163,4 +164,19 @@ footer {
 footer>p>a {
   color: #1db954;
   text-decoration: none;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+  .play-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .play-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
