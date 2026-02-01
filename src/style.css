@@ -8,6 +8,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --text-color: #ffffff;
+  --text-accent: #1db954;
+  --background-dark: #000000;
+  --background-light: #1e1e1e;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 ul {
   list-style: none;
 }
@@ -17,3 +25,168 @@ img {
 }
 
 /* Add your styles below */
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-light);
+}
+
+main {
+  padding: 30px;
+}
+
+/* header */
+
+header,
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  background-color: var(--background-dark);
+  gap: 30px;
+  padding: 30px;
+}
+
+h1 {
+  color: var(--text-accent);
+}
+
+nav>ul {
+  display: flex;
+  gap: 30px;
+  padding: 0;
+}
+
+nav>ul>li>a {
+  display: flex;
+  color: var(--text-color);
+  text-decoration: none;
+
+}
+
+nav>ul>li>a:hover {
+  color: var(--text-accent);
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+/* section */
+
+section {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1e1e;
+}
+
+ul {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+h2 {
+  background-color: var(--background-light);
+  color: var(--text-accent);
+  font-size: 1.5rem;
+}
+
+section>ul {
+  display: flex;
+  max-width: 1200px;
+  height: auto;
+}
+
+section>ul>li {
+  color: var(--text-color);
+}
+
+section>ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+section>ul>li>figure {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-weight: bold;
+  background-color: black;
+  border: solid 4px black;
+  border-radius: 4px;
+  align-items: center;
+}
+
+.play-list>li>figure {
+  gap: 15px
+}
+
+.play-list>li>figure>img {
+  width: 100px;
+  height: 100px;
+  padding: 8px;
+}
+
+.play-list {
+  grid-template-columns: 1fr;
+}
+
+
+/* album section */
+
+
+.album-list {
+  display: flex;
+  gap: 20px;
+}
+
+.album-list>li>figure {
+  grid-template-columns: 1fr;
+  width: 180px;
+  padding: 15px;
+  gap: 5px;
+  border-radius: 8px;
+}
+
+.album-list>li>img {
+  border: solid 1px var(--background-dark);
+  border-radius: 4px;
+}
+
+.artist {
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+/* footer */
+footer {
+  background-color: var(--background-light);
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px;
+}
+
+footer>p>a {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+  .play-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .play-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
