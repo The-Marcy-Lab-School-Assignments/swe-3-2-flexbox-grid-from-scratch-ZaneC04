@@ -8,6 +8,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --text-color: #ffffff;
+  --text-accent: #1db954;
+  --background-dark: #000000;
+  --background-light: #1e1e1e;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 ul {
   list-style: none;
 }
@@ -19,8 +27,8 @@ img {
 /* Add your styles below */
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #1e1e1e;
+  font-family: var(--font-family);
+  background-color: var(--background-light);
 }
 
 main {
@@ -37,28 +45,30 @@ nav {
 }
 
 header {
-  background-color: black;
+  background-color: var(--background-dark);
   gap: 30px;
   padding: 30px;
 }
 
 h1 {
-  color: #1db954;
+  color: var(--text-accent);
 }
 
-nav {
-  gap: 30px;
-}
-
-nav>a {
+nav>ul {
   display: flex;
-  color: white;
+  gap: 30px;
+  padding: 0;
+}
+
+nav>ul>li>a {
+  display: flex;
+  color: var(--text-color);
   text-decoration: none;
 
 }
 
-nav>a:hover {
-  color: #1db954;
+nav>ul>li>a:hover {
+  color: var(--text-accent);
 }
 
 .logo {
@@ -81,8 +91,8 @@ ul {
 }
 
 h2 {
-  background-color: #1e1e1e;
-  color: #1db954;
+  background-color: var(--background-light);
+  color: var(--text-accent);
   font-size: 1.5rem;
 }
 
@@ -93,7 +103,7 @@ section>ul {
 }
 
 section>ul>li {
-  color: white;
+  color: var(--text-color);
 }
 
 section>ul {
@@ -102,7 +112,7 @@ section>ul {
   gap: 15px;
 }
 
-section>ul>li {
+section>ul>li>figure {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   font-weight: bold;
@@ -112,11 +122,11 @@ section>ul>li {
   align-items: center;
 }
 
-.play-list>li {
+.play-list>li>figure {
   gap: 15px
 }
 
-.play-list>li>img {
+.play-list>li>figure>img {
   width: 100px;
   height: 100px;
   padding: 8px;
@@ -135,7 +145,7 @@ section>ul>li {
   gap: 20px;
 }
 
-.album-list>li {
+.album-list>li>figure {
   grid-template-columns: 1fr;
   width: 180px;
   padding: 15px;
@@ -144,7 +154,7 @@ section>ul>li {
 }
 
 .album-list>li>img {
-  border: solid 1px black;
+  border: solid 1px var(--background-dark);
   border-radius: 4px;
 }
 
@@ -155,14 +165,14 @@ section>ul>li {
 
 /* footer */
 footer {
-  background-color: #1e1e1e;
-  color: white;
+  background-color: var(--background-light);
+  color: var(--text-color);
   text-align: center;
   padding: 20px;
 }
 
 footer>p>a {
-  color: #1db954;
+  color: var(--text-accent);
   text-decoration: none;
 }
 
